@@ -55,7 +55,7 @@ export default function EventList({ events, rates, seriesId }: EventListProps) {
         <div className={styles.container}>
             <header className={styles.header}>
                 <Link href="/" className={styles.backButton}>‹ シリーズ一覧へ</Link>
-                <h2 className={styles.title}>{seriesId.replace(/_/g, ' ')} Schedule</h2>
+                <h2 className={styles.title}>{(seriesId || '').replace(/_/g, ' ')} Schedule</h2>
             </header>
 
             <div className={styles.list}>

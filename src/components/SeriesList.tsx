@@ -44,7 +44,7 @@ export default function SeriesList({ series }: { series: Series[] }) {
                         </div>
                         <div className={styles.info}>
                             <div className={styles.mainRow}>
-                                <h3 className={styles.seriesName}>{item.series_id.replace(/_/g, ' ')}</h3>
+                                <h3 className={styles.seriesName}>{(item.series_id || '').replace(/_/g, ' ')}</h3>
                                 <span className={styles.arrow}>›</span>
                             </div>
                             <p className={styles.dates}>

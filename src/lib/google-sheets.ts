@@ -52,13 +52,16 @@ export async function fetchCSV<T>(gid: string): Promise<T[]> {
 }
 
 export async function getSeriesMaster() {
-    return fetchCSV<Series>(GIDS.series_master);
+    const data = await fetchCSV<Series>(GIDS.series_master);
+    return data.filter(item => item.series_id && typeof item.series_id === 'string');
 }
 
 export async function getTournamentDetails() {
-    return fetchCSV<Tournament>(GIDS.tournament_details);
+    const data = await fetchCSV<Tournament>(GIDS.tournament_details);
+    return data.filter(item => item.event_id && item.series_id);
 }
 
 export async function getExchangeRates() {
-    return fetchCSV<ExchangeRate>(GIDS.rates);
+    const data = await fetchCSV<ExchangeRate>(GIDS.rates);
+    return data.filter(item => item.currency_code);
 }
