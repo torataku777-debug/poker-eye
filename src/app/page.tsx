@@ -1,34 +1,14 @@
-import { auth, signOut } from "@/auth"
+import { getSeriesMaster } from '@/lib/google-sheets';
+import SeriesList from '@/components/SeriesList';
+
+export const revalidate = 3600; // Revalidate every hour
 
 export default async function Home() {
-  const session = await auth()
+  const series = await getSeriesMaster();
 
   return (
-    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
-      <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>Poker Eye Admin Dashboard</h1>
-      {session ? (
-        <div>
-          <p>Welcome, {session.user?.name} ({session.user?.email})</p>
-          <form
-            action={async () => {
-              "use server"
-              await signOut()
-            }}
-          >
-            <button style={{
-              backgroundColor: '#ef4444',
-              color: 'white',
-              padding: '0.5rem 1rem',
-              borderRadius: '0.25rem',
-              marginTop: '1rem',
-              border: 'none',
-              cursor: 'pointer'
-            }}>Sign Out</button>
-          </form>
-        </div>
-      ) : (
-        <p>You are not logged in. (This should not be visible if middleware works)</p>
-      )}
+    <div>
+      <SeriesList series={series} />
     </div>
-  )
+  );
 }

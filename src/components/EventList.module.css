@@ -1,0 +1,108 @@
+.container {
+    padding: 0 var(--spacing-md);
+}
+
+.header {
+    padding: var(--spacing-md) 0;
+}
+
+.backButton {
+    color: var(--color-primary);
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: var(--spacing-sm);
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.dateHeader {
+    color: var(--color-text-sub);
+    font-size: 14px;
+    margin-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 4px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-surface);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    transition: transform 0.1s, background 0.2s;
+}
+
+.card:active {
+    transform: scale(0.98);
+    background: var(--color-surface-hover);
+}
+
+.cardMain {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.timeAndBadge {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.time {
+    font-family: var(--font-family-number);
+    color: var(--color-text-main);
+}
+
+.deepnessBadge {
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #000;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.eventName {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.priceColumn {
+    text-align: right;
+    min-width: 80px;
+}
+
+.price {
+    display: block;
+    color: var(--color-primary);
+    font-size: 15px;
+}
+
+.rake {
+    display: block;
+    font-size: 10px;
+    color: var(--color-text-sub);
+    margin-top: 2px;
+}
+
+.empty {
+    text-align: center;
+    color: var(--color-text-sub);
+    padding: var(--spacing-xl);
+}

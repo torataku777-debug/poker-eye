@@ -1,0 +1,52 @@
+.header {
+    height: 60px;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-bg);
+    position: sticky;
+    top: 0;
+    z-index: 900;
+}
+
+.logo {
+    font-family: var(--font-family-number);
+    font-size: 20px;
+    font-weight: 900;
+    background: linear-gradient(90deg, #FFFFFF, #8899A6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+.currencyToggle {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    padding: 6px 12px;
+    color: var(--color-text-sub);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    transition: border-color 0.2s;
+}
+
+.currencyToggle:active {
+    transform: scale(0.98);
+}
+
+.currencyOption {
+    transition: color 0.2s;
+}
+
+.active {
+    color: var(--color-primary);
+}
+
+.divider {
+    opacity: 0.3;
+}

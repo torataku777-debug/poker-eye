@@ -1,0 +1,138 @@
+.container {
+    padding: 0 var(--spacing-md);
+}
+
+.header {
+    margin-bottom: var(--spacing-md);
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.filters {
+    display: flex;
+    gap: var(--spacing-sm);
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.filterButton {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-sub);
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.filterButton.active {
+    background: var(--color-primary);
+    color: #000;
+    border-color: var(--color-primary);
+    font-weight: 700;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.card {
+    display: flex;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    align-items: center;
+    gap: var(--spacing-md);
+    border: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.card:active {
+    border-color: var(--color-border);
+    background: var(--color-surface-hover);
+}
+
+.logoContainer {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    background: #000;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoPlaceholder {
+    color: var(--color-text-sub);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mainRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seriesName {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.arrow {
+    color: var(--color-text-sub);
+    font-size: 18px;
+}
+
+.dates {
+    color: var(--color-text-sub);
+    font-size: 12px;
+    font-family: var(--font-family-number);
+}
+
+.metaRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 4px;
+}
+
+.country {
+    font-size: 12px;
+    color: var(--color-text-sub);
+}
+
+.prize {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.prizeLabel {
+    font-size: 10px;
+    color: var(--color-text-sub);
+}
+
+.prizeAmount {
+    color: var(--color-primary);
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
